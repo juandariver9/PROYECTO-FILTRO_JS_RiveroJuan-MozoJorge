@@ -2,6 +2,22 @@ function buscar(name) {
     fetchRockets(name);
 }
 
+function showRockets(){
+    document.getElementById('rockets').style.display = 'block'; 
+    document.getElementById('ships').style.display = 'none'; 
+    document.getElementById('history').style.display = 'none'; 
+}
+function showShips(){
+    document.getElementById('rockets').style.display = 'none'; 
+    document.getElementById('ships').style.display = 'block'; 
+    document.getElementById('history').style.display = 'none'; 
+}
+function showHistory(){
+    document.getElementById('rockets').style.display = 'none'; 
+    document.getElementById('ships').style.display = 'none'; 
+    document.getElementById('history').style.display = 'block'; 
+}
+
 function fetchRockets(name) {
     let url = 'https://api.spacexdata.com/v4/rockets/';
     fetch(url)
