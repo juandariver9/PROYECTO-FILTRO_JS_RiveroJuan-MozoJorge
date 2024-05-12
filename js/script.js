@@ -1,7 +1,3 @@
-function buscar(name) {
-    fetchRockets(name);
-}
-
 function showRockets(){
     document.getElementById('rockets').style.display = 'block'; 
     document.getElementById('ships').style.display = 'none'; 
@@ -11,6 +7,7 @@ function showShips(){
     document.getElementById('rockets').style.display = 'none'; 
     document.getElementById('ships').style.display = 'block'; 
     document.getElementById('history').style.display = 'none'; 
+
 }
 function showHistory(){
     document.getElementById('rockets').style.display = 'none'; 
@@ -34,6 +31,54 @@ function fetchRockets(name) {
                     
                     displayInfoRockets(rocket);
                 }
+            } 
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function fetchShips(name) {
+    let url = 'https://api.spacexdata.com/v4/ships/';
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (name) {
+                const ship = data.find(ship => ship.name === name);
+                if (ship) {
+                    displayInfoShips(ship);
+                    
+                }
+            } else {
+                console.log(data);
+                
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function fetchHistory(name) {
+    let url = 'https://api.spacexdata.com/v4/history/';
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (name) {
+                const event = data.find(event => event.title === name);
+                if (event) {
+                    displayInfoHistory(event);
+                }
             } else {
                 console.log(data);
             }
@@ -42,6 +87,8 @@ function fetchRockets(name) {
             console.error('Error:', error);
         });
 }
+
+//------
 
 function displayInfoRockets(rocket) {
     let generalInfo = document.getElementById("infoRockets");
@@ -95,11 +142,51 @@ function displayInfoRockets(rocket) {
         </ul>
         <p><b>Imágenes:</b></p>
         <ul>
-            ${rocket.flickr_images.map(image => `<li><img src="${image}" alt="Rocket Image" style="max-width: 300px;"></li>`).join('')}
+            ${rocket.flickr_images.map(image => `<img src="${image}" alt="Rocket Image" style="max-width: 300px;">`).join('')}
         </ul>
         <p><b>Enlace a Wikipedia: </b><a href="${rocket.wikipedia}" target="_blank">Link</a></p>
     `;
 }
 
+function displayInfoShips(ship) {
+    let infoShips = document.getElementById("infoShips");
+    infoShips.innerHTML = `
+    <p><b>Nombre: </b>${ship.name}</p>
+    <p><b>Tipo: </b>${ship.type}</p>
+    <p><b>Roles: </b>${ship.roles.join(', ')}</p>
+    <p><b>Año de Construcción: </b>${ship.year_built}</p>
+    <p><b>Puerto de Origen: </b>${ship.home_port}</p>
+    <p><b>Estado: </b>${ship.status || 'Desconocido'}</p>
+    <p><b>Última actualización AIS: </b>${ship.last_ais_update || 'Desconocido'}</p>
+    <p><b>ID heredado: </b>${ship.legacy_id || 'Desconocido'}</p>
+    <p><b>Modelo: </b>${ship.model || 'Desconocido'}</p>
+    <p><b>IMO: </b>${ship.imo || 'Desconocido'}</p>
+    <p><b>MMSI: </b>${ship.mmsi || 'Desconocido'}</p>
+    <p><b>ABS: </b>${ship.abs || 'Desconocido'}</p>
+    <p><b>Clase: </b>${ship.class || 'Desconocido'}</p>
+    <p><b>Masa (kg): </b>${ship.mass_kg || 'Desconocido'}</p>
+    <p><b>Masa (libras): </b>${ship.mass_lbs || 'Desconocido'}</p>
+    <p><b>Velocidad (nudos): </b>${ship.speed_kn || 'Desconocido'}</p>
+    <p><b>Rumbo (grados): </b>${ship.course_deg || 'Desconocido'}</p>
+    <p><b>Latitud: </b>${ship.latitude || 'Desconocido'}</p>
+    <p><b>Longitud: </b>${ship.longitude || 'Desconocido'}</p>
+    <a href="${ship.link}" target="_blank">Más información</a>
+    <img src="${ship.image}" alt="${ship.name}" style="max-width: 300px;">
+`;
 
+}
+
+function displayInfoHistory(history) {
+    let infoHistory = document.getElementById("infoHistory");
+    infoHistory.innerHTML = `
+    <p><b>Título: </b>${history.title}</p>
+    <p><b>Fecha del evento (UTC): </b>${history.event_date_utc}</p>
+    <p><b>Fecha del evento (Unix): </b>${history.event_date_unix}</p>
+    <p><b>Detalles: </b>${history.details}</p>
+    <a href="${history.links.article}" target="_blank">Artículo</a>
+`;
+}
 fetchRockets();
+fetchShips();
+fetchHistory();
+
