@@ -186,7 +186,5 @@ function displayInfoHistory(history) {
     <a href="${history.links.article}" target="_blank">Artículo</a>
 `;
 }
-fetchRockets();
-fetchShips();
-fetchHistory();
+
 
