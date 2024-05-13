@@ -5,3 +5,138 @@
 #history, #ships {
     display: none;
 }
+
+body {
+    background-color: #131536;
+}
+
+#gridContainers {
+    display:  block;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-rows: repeat(13, calc(100% / 13)); 
+    grid-template-columns: repeat(18, calc(100% / 18)); 
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    gap: 1px;
+}
+
+.item {
+    background-color: #aaaaaa;
+    display: flex;
+    
+}
+
+#item1 {
+    grid-column: span 18;
+}
+#item2 {
+    display: table-column;
+}
+
+#item3 {
+    grid-column: span 10;
+}
+
+#item2,
+#item4,
+#item16,
+#item17 {
+    grid-column: span 4;
+}
+
+#item6,
+#item7,
+#item8,
+#item9,
+#item11,
+#item12,
+#item13,
+#item14,
+#item15 {
+    grid-column: span 2;
+}
+
+#item5,
+#item10 {
+    grid-column: span 1;
+}
+
+#item19,
+#item21 {
+    grid-column: span 8;
+}
+
+#item18,
+#item20 {
+    grid-column: span 5;
+}
+
+#item2,
+#item4 {
+    grid-row: span 9;
+}
+
+#item13 {
+    grid-row: span 6;
+}
+
+#item16,
+#item17 {
+    grid-row: span 4;
+}
+
+#item18,
+#item20 {
+    grid-row: span 3;
+}
+
+#item5,
+#item6,
+#item7,
+#item8,
+#item9,
+#item10,
+#item11,
+#item12,
+#item14,
+#item15,
+#item21 {
+    grid-row: span 2;
+}
+
+
+
+.loader {
+    width: 320px;
+    height: 200px;
+    background: 
+      linear-gradient(90deg,#0001 33%,#0005 50%,#0001 66%)
+      #2a2d6d;
+    background-size:300% 100%;
+    animation: l1 1s infinite linear;
+  }
+  @keyframes l1 {
+    0% {background-position: right}
+  }
+
+.containerInfo {
+    display: flex;
+    padding: 1.5vw;
+    border: 1px solid black;
+}
+
+#check {
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    filter: sepia(100%) saturate(0) hue-rotate(0deg);
+}
+
+
+.text-container {
+    margin-left: 20px;
+}
