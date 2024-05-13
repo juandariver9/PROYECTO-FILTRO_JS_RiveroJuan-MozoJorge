@@ -1,21 +1,21 @@
 function showRockets(){
     document.getElementById('rockets').style.display = 'block'; 
-    document.getElementById('ships').style.display = 'none'; 
+    document.getElementById('capsules').style.display = 'none'; 
     document.getElementById('history').style.display = 'none'; 
 }
-function showShips(){
+function showCapsules(){
     document.getElementById('rockets').style.display = 'none'; 
-    document.getElementById('ships').style.display = 'block'; 
+    document.getElementById('capsules').style.display = 'block'; 
     document.getElementById('history').style.display = 'none'; 
 
 }
 function showHistory(){
     document.getElementById('rockets').style.display = 'none'; 
-    document.getElementById('ships').style.display = 'none'; 
+    document.getElementById('capsules').style.display = 'none'; 
     document.getElementById('history').style.display = 'block'; 
 }
 
-function fetchRockets(name) {
+function fetchRockets(index) {
     let url = 'https://api.spacexdata.com/v4/rockets/';
     fetch(url)
         .then(response => {
@@ -25,21 +25,22 @@ function fetchRockets(name) {
             return response.json();
         })
         .then(data => {
-            if (name) {
-                const rocket = data.find(rocket => rocket.name === name);
-                if (rocket) {
-                    
-                    displayInfoRockets(rocket);
-                }
-            } 
+            if (index >= 0 && index < data.length) {
+                const rocket = data[index];
+                displayInfoRockets(rocket);
+                
+            } else {
+                console.log('Índice de cohete fuera de rango.');
+            }
         })
         .catch(error => {
             console.error('Error:', error);
         });
 }
+    
 
-function fetchShips(name) {
-    let url = 'https://api.spacexdata.com/v4/ships/';
+function fetchCapsules(index) {
+    let url = 'https://api.spacexdata.com/v4/capsules/';
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -48,15 +49,11 @@ function fetchShips(name) {
             return response.json();
         })
         .then(data => {
-            if (name) {
-                const ship = data.find(ship => ship.name === name);
-                if (ship) {
-                    displayInfoShips(ship);
-                    
-                }
+            if (index >= 0 && index < data.length) {
+                const capsule = data[index];
+                displayInfoCapsules(capsule);
             } else {
-                console.log(data);
-                
+                console.log("Índice fuera de rango");
             }
         })
         .catch(error => {
@@ -64,7 +61,8 @@ function fetchShips(name) {
         });
 }
 
-function fetchHistory(name) {
+
+function fetchHistory(index) {
     let url = 'https://api.spacexdata.com/v4/history/';
     fetch(url)
         .then(response => {
@@ -74,19 +72,18 @@ function fetchHistory(name) {
             return response.json();
         })
         .then(data => {
-            if (name) {
-                const event = data.find(event => event.title === name);
-                if (event) {
-                    displayInfoHistory(event);
-                }
+            if (index >= 0 && index < data.length) {
+                const event = data[index];
+                displayInfoHistory(event);
             } else {
-                console.log(data);
+                console.log('Índice de evento histórico fuera de rango.');
             }
         })
         .catch(error => {
             console.error('Error:', error);
         });
 }
+
 
 //------
 
@@ -148,33 +145,20 @@ function displayInfoRockets(rocket) {
     `;
 }
 
-function displayInfoShips(ship) {
-    let infoShips = document.getElementById("infoShips");
-    infoShips.innerHTML = `
-    <p><b>Nombre: </b>${ship.name}</p>
-    <p><b>Tipo: </b>${ship.type}</p>
-    <p><b>Roles: </b>${ship.roles.join(', ')}</p>
-    <p><b>Año de Construcción: </b>${ship.year_built}</p>
-    <p><b>Puerto de Origen: </b>${ship.home_port}</p>
-    <p><b>Estado: </b>${ship.status || 'Desconocido'}</p>
-    <p><b>Última actualización AIS: </b>${ship.last_ais_update || 'Desconocido'}</p>
-    <p><b>ID heredado: </b>${ship.legacy_id || 'Desconocido'}</p>
-    <p><b>Modelo: </b>${ship.model || 'Desconocido'}</p>
-    <p><b>IMO: </b>${ship.imo || 'Desconocido'}</p>
-    <p><b>MMSI: </b>${ship.mmsi || 'Desconocido'}</p>
-    <p><b>ABS: </b>${ship.abs || 'Desconocido'}</p>
-    <p><b>Clase: </b>${ship.class || 'Desconocido'}</p>
-    <p><b>Masa (kg): </b>${ship.mass_kg || 'Desconocido'}</p>
-    <p><b>Masa (libras): </b>${ship.mass_lbs || 'Desconocido'}</p>
-    <p><b>Velocidad (nudos): </b>${ship.speed_kn || 'Desconocido'}</p>
-    <p><b>Rumbo (grados): </b>${ship.course_deg || 'Desconocido'}</p>
-    <p><b>Latitud: </b>${ship.latitude || 'Desconocido'}</p>
-    <p><b>Longitud: </b>${ship.longitude || 'Desconocido'}</p>
-    <a href="${ship.link}" target="_blank">Más información</a>
-    <img src="${ship.image}" alt="${ship.name}" style="max-width: 300px;">
-`;
-
+function displayInfoCapsules(capsule) {
+    let infoCapsules = document.getElementById("infoCapsules");
+    infoCapsules.innerHTML = `
+    <p><b>Reutilización: </b>${capsule.reuse_count}</p>
+    <p><b>Aterrizajes en agua: </b>${capsule.water_landings}</p>
+    <p><b>Aterrizajes en tierra: </b>${capsule.land_landings}</p>
+    <p><b>Última actualización: </b>${capsule.last_update}</p>
+    <p><b>Lanzamientos: </b>${capsule.launches.join(", ")}</p>
+    <p><b>Número de serie: </b>${capsule.serial}</p>
+    <p><b>Estado: </b>${capsule.status}</p>
+    <p><b>Tipo: </b>${capsule.type}</p>
+    `;
 }
+
 
 function displayInfoHistory(history) {
     let infoHistory = document.getElementById("infoHistory");
@@ -183,8 +167,10 @@ function displayInfoHistory(history) {
     <p><b>Fecha del evento (UTC): </b>${history.event_date_utc}</p>
     <p><b>Fecha del evento (Unix): </b>${history.event_date_unix}</p>
     <p><b>Detalles: </b>${history.details}</p>
-    <a href="${history.links.article}" target="_blank">Artículo</a>
+    <p><b>Enlaces:</b></p>
+    <ul>
+        <li><a href="${history.links.article}" target="_blank">Artículo</a></li>
+    </ul>
 `;
 }
-
 

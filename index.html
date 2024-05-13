@@ -9,80 +9,171 @@
 <body>
 
 
-    <button class="btn" onclick="showRockets()">Rockets</button>
-    <button class="btn" onclick="showShips()">Ships</button>
-    <button class="btn" onclick="showHistory()">History</button>
+    <div class="gridContainer">
 
-    <div id="rockets" class="rockets">
-
-        <button class="btn" onclick="fetchRockets('Falcon 1')">1</button>
-        <button class="btn" onclick="fetchRockets('Falcon 9')">2</button>
-        <button class="btn" onclick="fetchRockets('Falcon Heavy')">3</button>
-        <button class="btn" onclick="fetchRockets('Starship')">4</button>
-        <div id="infoRockets">
-
+        <div class="item" id="item1">
+            <p>Vehicle overview</p>
         </div>
+        <div class="item" id="item2">
+            <div class="containerInfo">
+                <img id="check" src="./storage/img/check.png" alt="check">
+                <div class="text-container">
+                    <p style="color: #6a6c90;">ALL SYSTEMS CHECK</p>
+                    <p style="color: #3e405e;">Normal</p>
+                </div>
+            </div>
+            <div class="containerInfo">
+                <img id="check" src="./storage/img/check.png" alt="check">
+                <div class="text-container">
+                    <p style="color: #6a6c90;">RENDEZVOUS BURN SLOW</p>
+                    <p style="color: #3e405e;">Normal</p>
+                </div>
+            </div>
+            <div class="containerInfo">
+                <img id="check" src="./storage/img/check.png" alt="check">
+                <div class="text-container">
+                    <p style="color: #6a6c90;">PREPARE RENDEZVOUS BURN</p>
+                    <p style="color: #3e405e;">Normal</p>
+                </div>
+            </div>
+            <div class="containerInfo">
+                <img id="check" src="./storage/img/check.png" alt="check">
+                <div class="text-container">
+                    <p style="color: #6a6c90;">THERMAL SHIELD</p>
+                    <p style="color: #b0b1ba;">Applied</p>
+                </div>
+            </div>
+            <div class="containerInfo">
+                <img id="check" src="./storage/img/check.png" alt="check">
+                <div class="text-container">
+                    <p style="color: #6a6c90;">BURN GO/NO-GO</p>
+                    <p style="color: #3e405e;">Normal</p>
+                </div>
+            </div>
+            <div class="containerInfo">
+                <img id="check" src="./storage/img/check.png" alt="check">
+                <div class="text-container">
+                    <p style="color: #6a6c90;">POWER COMPLEMENTION</p>
+                    <p style="color: #b0b1ba;">Awaiting</p>
+                </div>
+            </div>
+            <div class="containerInfo">
+                <img id="check" src="./storage/img/check.png" alt="check">
+                <div class="text-container">
+                    <p style="color: #6a6c90;">STATION DECK CHECK</p>
+                    <p style="color: #3e405e;">Normal</p>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="item3"></div>
+        <div class="item" id="item4"></div>
+        <div class="item" id="item5"></div>
+        <div class="item" id="item6"></div>
+        <div class="item" id="item7"></div>
+        <div class="item" id="item8"></div>
+        <div class="item" id="item9"></div>
+        <div class="item" id="item10"></div>
+        <div class="item" id="item11"></div>
+        <div class="item" id="item12"></div>
+        <div class="item" id="item13"></div>
+        <div class="item" id="item14"></div>
+        <div class="item" id="item15"></div>
+        <div class="item" id="item16">
+            
+        </div>
+        <div class="item" id="item17"></div>
+        <div class="item" id="item18"></div>
+        <div class="item" id="item19"></div>
+        <div class="item" id="item20"></div>
+        <div class="item" id="item21"></div>
+
+
+
+
 
     </div>
-
-    <div id="ships" class="ships">
-
-        <button class="btn" onclick="fetchShips('American Champion')">s</button>
-        <button class="btn" onclick="fetchShips('American Islander')">r</button>
-        <button class="btn" onclick="fetchShips('American Spirit')">y</button>
-        <button class="btn" onclick="fetchShips('A Shortfall of Gravitas')">4</button>
-        <button class="btn" onclick="fetchShips('Betty R Gambarella')">5</button>
-        <button class="btn" onclick="fetchShips('Elsbeth III')">6</button>
-        <button class="btn" onclick="fetchShips('GO Ms Chief')">7</button>
-        <button class="btn" onclick="fetchShips('GO Ms Tree')">8</button>
-        <button class="btn" onclick="fetchShips('Shannon')">9</button>
-        <button class="btn" onclick="fetchShips('GO Pursuit')">10</button>
-        <button class="btn" onclick="fetchShips('GO Quest')">11</button>
-        <button class="btn" onclick="fetchShips('Megan')">12</button>
-        <button class="btn" onclick="fetchShips('HAWK')">13</button>
-        <button class="btn" onclick="fetchShips('Hollywood')">14</button>
-        <button class="btn" onclick="fetchShips('Just Read The Instructions 1')">15</button>
-        <button class="btn" onclick="fetchShips('Just Read The Instructions 2')">16</button>
-        <button class="btn" onclick="fetchShips('Kelly C')">17</button>
-        <button class="btn" onclick="fetchShips('NRC Quest')">18</button>
-        <button class="btn" onclick="fetchShips('Of Course I Still Love You')">19</button>
-        <button class="btn" onclick="fetchShips('Pacific Freeedom')">20</button>
-        <button class="btn" onclick="fetchShips('Pacific Warrior')">21</button>
-        <button class="btn" onclick="fetchShips('RACHEL')">22</button>
-        <button class="btn" onclick="fetchShips('Finn Falgout')">23</button>
-        <button class="btn" onclick="fetchShips('Lauren Foss')">24</button>
-        <button class="btn" onclick="fetchShips('Shelia Bordelon')">25</button>
-        <button class="btn" onclick="fetchShips('Mr. Jonah')">26</button>
-        <button class="btn" onclick="fetchShips('HOS Briarwood')">27</button>
-        <button class="btn" onclick="fetchShips('Doug')">28</button>
-        <button class="btn" onclick="fetchShips('Bob')">29</button>
-
+    <div id=gridContainers>
+        <button class="btn" onclick="showRockets()">Rockets</button>
+        <button class="btn" onclick="showCapsules()">Capsules</button>
+        <button class="btn" onclick="showHistory()">History</button>
+    
         
-        <div id="infoShips">
     
+        <div id="overview" class="overview">
+    
+        </div>
+    
+        <div id="rockets" class="conteinerRockets">
+    
+            <button class="btn" onclick="fetchRockets(0)">1</button>
+            <button class="btn" onclick="fetchRockets(1)">2</button>
+            <button class="btn" onclick="fetchRockets(2)">3</button>
+            <button class="btn" onclick="fetchRockets(3)">4</button>
+            <div id="infoRockets">
+    
+            </div>
+    
+        </div>
+    
+        <div id="capsules" class="conteinerCapsules">
+
+            <button class="btn" onclick="fetchCapsules(0)">s</button>
+            <button class="btn" onclick="fetchCapsules(1)">r</button>
+            <button class="btn" onclick="fetchCapsules(2)">y</button>
+            <button class="btn" onclick="fetchCapsules(3)">4</button>
+            <button class="btn" onclick="fetchCapsules(4)">5</button>
+            <button class="btn" onclick="fetchCapsules(5)">6</button>
+            <button class="btn" onclick="fetchCapsules(6)">7</button>
+            <button class="btn" onclick="fetchCapsules(7)">8</button>
+            <button class="btn" onclick="fetchCapsules(8)">9</button>
+            <button class="btn" onclick="fetchCapsules(9)">10</button>
+            <button class="btn" onclick="fetchCapsules(10)">11</button>
+            <button class="btn" onclick="fetchCapsules(11)">12</button>
+            <button class="btn" onclick="fetchCapsules(12)">13</button>
+            <button class="btn" onclick="fetchCapsules(13)">14</button>
+            <button class="btn" onclick="fetchCapsules(14)">15</button>
+            <button class="btn" onclick="fetchCapsules(15)">16</button>
+            <button class="btn" onclick="fetchCapsules(16)">17</button>
+            <button class="btn" onclick="fetchCapsules(17)">18</button>
+            <button class="btn" onclick="fetchCapsules(18)">19</button>
+            <button class="btn" onclick="fetchCapsules(19)">20</button>
+            <button class="btn" onclick="fetchCapsules(20)">21</button>
+            <button class="btn" onclick="fetchCapsules(21)">22</button>
+            <button class="btn" onclick="fetchCapsules(22)">23</button>
+            <button class="btn" onclick="fetchCapsules(23)">24</button>
+            <button class="btn" onclick="fetchCapsules(24)">25</button>
+            
+    
+            
+            <div id="infoCapsules">
+        
+            </div>
+        </div>
+        
+    
+        <div id="history" class="conteinerHistory">
+            <button class="btn" onclick="fetchHistory(0)">1</button>
+            <button class="btn" onclick="fetchHistory(1)">2</button>
+            <button class="btn" onclick="fetchHistory(2)">3</button>
+            <button class="btn" onclick="fetchHistory(3)">4</button>
+            <button class="btn" onclick="fetchHistory(4)">5</button>
+            <button class="btn" onclick="fetchHistory(5)">6</button>
+            <button class="btn" onclick="fetchHistory(6)">7</button>
+            <button class="btn" onclick="fetchHistory(7)">8</button>
+            <button class="btn" onclick="fetchHistory(8)">9</button>
+            <button class="btn" onclick="fetchHistory(9)">10</button>
+            <button class="btn" onclick="fetchHistory(10)">11</button>
+            <button class="btn" onclick="fetchHistory(11)">12</button>
+            <button class="btn" onclick="fetchHistory(12)">13</button>
+            <button class="btn" onclick="fetchHistory(13)">14</button>
+            <button class="btn" onclick="fetchHistory(14)">15</button>
+    
+            <div id="infoHistory">
+        
+            </div>
         </div>
     </div>
     
-
-    <div id="history" class="history">
-        <button class="btn" onclick="fetchHistory('Falcon reaches Earth orbit')">1</button>
-        <button class="btn" onclick="fetchHistory('Falcon delivers payload to orbit')">2</button>
-        <button class="btn" onclick="fetchHistory('First successfull Dragon launch')">3</button>
-        <button class="btn" onclick="fetchHistory('Dragon capsule births with ISS')">4</button>
-        <button class="btn" onclick="fetchHistory('First Falcon 9 GTO mission')">5</button>
-        <button class="btn" onclick="fetchHistory('Successfull Falcon 9 landing')">6</button>
-        <button class="btn" onclick="fetchHistory('Successfull Falcon 9 droneship landing')">7</button>
-        <button class="btn" onclick="fetchHistory('First Falcon 9 reflight')">8</button>
-        <button class="btn" onclick="fetchHistory('Fairing recovered successfully')">9</button>
-        <button class="btn" onclick="fetchHistory('First Dragon reflight')">10</button>
-        <button class="btn" onclick="fetchHistory('First Falcon Heavy heliocentric mission')">11</button>
-        <button class="btn" onclick="fetchHistory('Successfull Dragon 2 docking with ISS')">12</button>
-        <button class="btn" onclick="fetchHistory('First flight of Raptor engine')">13</button>
-
-        <div id="infoHistory">
-    
-        </div>
-    </div>
 
 
 
