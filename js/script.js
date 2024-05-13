@@ -37,7 +37,7 @@ function fetchRockets(index) {
             console.error('Error:', error);
         });
 }
-    
+
 
 function fetchCapsules(index) {
     let url = 'https://api.spacexdata.com/v4/capsules/';
@@ -173,4 +173,8 @@ function displayInfoHistory(history) {
     </ul>
 `;
 }
-
+function updateBar() {
+    var input = document.getElementById("velocityInput").value;
+    var progressBar = document.getElementById("progressBar");
+    progressBar.style.width = (input * 10) + "%";
+}
