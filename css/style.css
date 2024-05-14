@@ -9,6 +9,7 @@
 
 body {
     background-color: #131536;
+    overflow-x: hidden;
 }
 
 #gridContainers {
@@ -26,8 +27,8 @@ body {
 }
 
 .item {
-    background-color: #aaaaaa;
     display: flex;
+    background-color: gray;
     
 }
 
@@ -35,14 +36,31 @@ body {
     grid-column: span 18;
 }
 #item2 {
-    display: table-column;
+    font-size: 1.3vw;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center;
+}
+
+#infoEtapa1{
+    margin-bottom: 40px;
 }
 #item4 {
-    display: table-row;
+    display: flex;
+    flex-direction: column; 
+    font-size: 1.3vw;
+    margin-right: 32px;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #item3 {
     grid-column: span 10;
+    font-size: 4vw;
+    justify-content: center;
+    align-items: center;
 }
 
 #item2,
@@ -127,17 +145,8 @@ body {
     0% {background-position: right}
   }
 
-.containerInfo {
-    display: flex;
-    padding: 1.5vw;
-}
 
-#check {
-    margin-left: 20px;
-    width: 30px;
-    height: 30px;
-    filter: sepia(100%) saturate(0) hue-rotate(0deg);
-}
+
 
 .containerInfo2 {
     padding: 10px 0px 0px 10px;
@@ -170,4 +179,58 @@ body {
     margin-left: auto;
     font-weight: bold;
     margin-right: 55px;
+}
+
+#carrusel-container {
+    position: relative;
+    max-width: 12vw; /* Ancho máximo del carrusel */
+    overflow: hidden; 
+    margin: auto;
+  }
+  
+  #carrusel {
+    display: flex;
+    transition: transform 1s ease; /* Efecto de desplazamiento suave */
+  }
+
+  #carrusel-container img{
+    border-radius: 30px;
+    height: 15vw;
+  }
+  
+  
+  #carrusel-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: black; 
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  #prevBtn {
+    left: 10px;
+  }
+  
+  #nextBtn {
+    right: 10px;
+  }
+  
+
+  #abajo {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50%;
+    align-self: end;
+  }
+
+  #check {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
 }

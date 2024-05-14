@@ -89,61 +89,126 @@ function fetchHistory(index) {
 
 function displayInfoRockets(rocket) {
     let generalInfo = document.getElementById("infoRockets");
+    let namerocket = document.getElementById("item3");
+
+    namerocket.innerHTML = `${rocket.name}`;
+
+    let imagenes = document.getElementById("carrusel");
+    
+    imagenes.innerHTML = `
+        ${rocket.flickr_images.map(image => `<img src="${image}" alt="Rocket Image" style="max-width: 11.2vw; max-height: 20vw;">`).join('')}
+    `;
+    let etapa1 = document.getElementById("infoEtapa1");
+    let etapa2 = document.getElementById("infoEtapa2");
+    etapa1.innerHTML = `
+    <img id="check" src="./storage/img/check.svg" alt="check">
+    <p><b>Primera Etapa:</b></p>
+    <ul>
+        <li>Empuje al nivel del mar: ${rocket.first_stage.thrust_sea_level.lbf} lbf (${rocket.first_stage.thrust_sea_level.kN} kN)</li>
+        <li>Empuje al vacío: ${rocket.first_stage.thrust_vacuum.lbf} lbf (${rocket.first_stage.thrust_vacuum.kN} kN)</li>
+        <li>Reutilizable: ${rocket.first_stage.reusable ? 'Sí' : 'No'}</li>
+        <li>Número de motores: ${rocket.first_stage.engines}</li>
+        <li>Cantidad de combustible: ${rocket.first_stage.fuel_amount_tons} tons</li>
+        <li>Tiempo de combustión: ${rocket.first_stage.burn_time_sec} sec</li>
+    </ul>`;
+    etapa2.innerHTML = `
+    <br>
+    <img id="check" src="./storage/img/check.svg" alt="check">
+    <p><b>Segunda Etapa:</b></p>
+    <ul>
+        <li>Empuje: ${rocket.second_stage.thrust.lbf} lbf (${rocket.second_stage.thrust.kN} kN)</li>
+        <li>Reutilizable: ${rocket.second_stage.reusable ? 'Sí' : 'No'}</li>
+        <li>Número de motores: ${rocket.second_stage.engines}</li>
+        <li>Cantidad de combustible: ${rocket.second_stage.fuel_amount_tons} tons</li>
+        <li>Tiempo de combustión: ${rocket.second_stage.burn_time_sec} sec</li>
+        <li>Carga útil:</li>
+        <ul>
+    </ul>`;
+
+    let motores = document.getElementById('item4')
+
+    motores.innerHTML = `
+    <div style=""> 
+    <img id="check" src="./storage/img/check.svg" alt="check">
+    <p style="padding-bottom:20px;"><b>Motores:</b></p>
+    </div>
+    <ul>
+        <li>Tipo: ${rocket.engines.type}</li>
+        <li>Versión: ${rocket.engines.version}</li>
+        <li>Diseño: ${rocket.engines.layout}</li>
+        <li>Rendimiento específico de impulso (ISP):</li>
+        <ul>
+            <li>Nivel del mar: ${rocket.engines.isp.sea_level} s</li>
+            <li>Vacío: ${rocket.engines.isp.vacuum} s</li>
+        </ul>
+        <li>Empuje al nivel del mar: ${rocket.engines.thrust_sea_level.lbf} lbf (${rocket.engines.thrust_sea_level.kN} kN)</li>
+        <li>Empuje al vacío: ${rocket.engines.thrust_vacuum.lbf} lbf (${rocket.engines.thrust_vacuum.kN} kN)</li>
+        <li>Número de motores: ${rocket.engines.number}</li>
+        <li>Pérdida máxima del motor: ${rocket.engines.engine_loss_max}</li>
+        <li>Propelentes: ${rocket.engines.propellant_1}, ${rocket.engines.propellant_2}</li>
+        <li>Razón de empuje-peso: ${rocket.engines.thrust_to_weight}</li>
+    </ul>
+    `
+    
     generalInfo.innerHTML = `
-        <p><b>Nombre: </b>${rocket.name}</p>
         <p><b>Altura: </b>${rocket.height.feet} feet (${rocket.height.meters} meters)</p>
         
         <p><b>Masa: </b>${rocket.mass.lb} lb (${rocket.mass.kg} kg)</p>
-        <p><b>Primera Etapa:</b></p>
-        <ul>
-            <li>Empuje al nivel del mar: ${rocket.first_stage.thrust_sea_level.lbf} lbf (${rocket.first_stage.thrust_sea_level.kN} kN)</li>
-            <li>Empuje al vacío: ${rocket.first_stage.thrust_vacuum.lbf} lbf (${rocket.first_stage.thrust_vacuum.kN} kN)</li>
-            <li>Reutilizable: ${rocket.first_stage.reusable ? 'Sí' : 'No'}</li>
-            <li>Número de motores: ${rocket.first_stage.engines}</li>
-            <li>Cantidad de combustible: ${rocket.first_stage.fuel_amount_tons} tons</li>
-            <li>Tiempo de combustión: ${rocket.first_stage.burn_time_sec} sec</li>
-        </ul>
-        <p><b>Segunda Etapa:</b></p>
-        <ul>
-            <li>Empuje: ${rocket.second_stage.thrust.lbf} lbf (${rocket.second_stage.thrust.kN} kN)</li>
-            <li>Reutilizable: ${rocket.second_stage.reusable ? 'Sí' : 'No'}</li>
-            <li>Número de motores: ${rocket.second_stage.engines}</li>
-            <li>Cantidad de combustible: ${rocket.second_stage.fuel_amount_tons} tons</li>
-            <li>Tiempo de combustión: ${rocket.second_stage.burn_time_sec} sec</li>
-            <li>Carga útil:</li>
-            <ul>
+
                 <li>Altura del carenado compuesto: ${rocket.second_stage.payloads.composite_fairing.height.feet} feet (${rocket.second_stage.payloads.composite_fairing.height.meters} meters)</li>
                 <li>Diámetro del carenado compuesto: ${rocket.second_stage.payloads.composite_fairing.diameter.feet} feet (${rocket.second_stage.payloads.composite_fairing.diameter.meters} meters)</li>
             </ul>
         </ul>
-        <p><b>Motores:</b></p>
-        <ul>
-            <li>Tipo: ${rocket.engines.type}</li>
-            <li>Versión: ${rocket.engines.version}</li>
-            <li>Diseño: ${rocket.engines.layout}</li>
-            <li>Rendimiento específico de impulso (ISP):</li>
-            <ul>
-                <li>Nivel del mar: ${rocket.engines.isp.sea_level} s</li>
-                <li>Vacío: ${rocket.engines.isp.vacuum} s</li>
-            </ul>
-            <li>Empuje al nivel del mar: ${rocket.engines.thrust_sea_level.lbf} lbf (${rocket.engines.thrust_sea_level.kN} kN)</li>
-            <li>Empuje al vacío: ${rocket.engines.thrust_vacuum.lbf} lbf (${rocket.engines.thrust_vacuum.kN} kN)</li>
-            <li>Número de motores: ${rocket.engines.number}</li>
-            <li>Pérdida máxima del motor: ${rocket.engines.engine_loss_max}</li>
-            <li>Propelentes: ${rocket.engines.propellant_1}, ${rocket.engines.propellant_2}</li>
-            <li>Razón de empuje-peso: ${rocket.engines.thrust_to_weight}</li>
-        </ul>
+
         <p><b>Pesos de la carga útil:</b></p>
         <ul>
             ${rocket.payload_weights.map(payload => `<li>${payload.name}: ${payload.lb} lb (${payload.kg} kg)</li>`).join('')}
         </ul>
-        <p><b>Imágenes:</b></p>
-        <ul>
-            ${rocket.flickr_images.map(image => `<img src="${image}" alt="Rocket Image" style="max-width: 300px;">`).join('')}
-        </ul>
         <p><b>Enlace a Wikipedia: </b><a href="${rocket.wikipedia}" target="_blank">Link</a></p>
     `;
 }
+
+/*------------------------------Carrusel---------------------------------------*/
+
+let imagenes = document.getElementById("carrusel");
+let currentIndex = 0;
+
+// Función para actualizar el carrusel con nuevas imágenes
+function actualizarCarrusel(images) {
+  imagenes.innerHTML = images.map(image => `<img src="${image}" alt="Rocket Image">`).join('');
+}
+
+// Funciones para navegar por el carrusel
+function mostrarSiguiente() {
+  if (currentIndex < imagenes.children.length - 1) {
+    currentIndex++;
+    actualizarTransform();
+  }
+}
+
+function mostrarAnterior() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    actualizarTransform();
+  }
+}
+
+function actualizarTransform() {
+  const slideWidth = imagenes.children[0].clientWidth;
+  imagenes.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// Asignar eventos a los botones
+document.getElementById("prevBtn").addEventListener("click", mostrarAnterior);
+document.getElementById("nextBtn").addEventListener("click", mostrarSiguiente);
+
+// Ejemplo de uso: Suponiendo que tienes un array de imágenes 'rocket.flickr_images'
+let images = rocket.flickr_images;
+actualizarCarrusel(images);
+
+
+/*---------------------------------------------------------------------*/
+
 
 function displayInfoCapsules(capsule) {
     let infoCapsules = document.getElementById("infoCapsules");
