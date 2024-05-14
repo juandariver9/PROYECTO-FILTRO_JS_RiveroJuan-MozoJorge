@@ -38,10 +38,13 @@ body {
 #item2 {
     font-size: 1.3vw;
     display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
 }
+
+
+
 
 #infoEtapa1{
     margin-bottom: 40px;
@@ -57,43 +60,83 @@ body {
 }
 
 #item3 {
-    grid-column: span 10;
+    grid-column: span 11;
     font-size: 4vw;
     justify-content: center;
     align-items: center;
 }
 
-#item2,
-#item4,
+#item2 {
+    grid-column: span 3;
+}
+
+
 #item16,
+#item18 {
+    grid-column: span 5;
+}
+
 #item17 {
-    grid-column: span 4;
-}
-
-#item6,
-#item7,
-#item8,
-#item9,
-#item11,
-#item12,
-#item13,
-#item14,
-#item15 {
-    grid-column: span 2;
-}
-
-#item5,
-#item10 {
-    grid-column: span 1;
-}
-
-#item19,
-#item21 {
     grid-column: span 8;
 }
 
-#item18,
-#item20 {
+#item4 {
+    grid-column: span 4;
+}
+
+#item6 {
+    grid-row: span 3;
+}
+
+#item7 {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+#item8 {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+#item9 {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+
+#item11 {
+    grid-column: span 3;
+    grid-row: span 5;
+}
+
+#item12 {
+    grid-column: span 4;
+}
+
+#item14 {
+    grid-column: span 4;
+    grid-row: span 3;
+}
+#item15 {
+    grid-column: span 18;
+    grid-row: span 1;
+}
+
+#item6{
+    grid-column: span 2;
+
+}
+
+#item5 {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+#item10 {
+    grid-column: span 4;
+}
+
+
+#item18{
     grid-column: span 5;
 }
 
@@ -103,30 +146,22 @@ body {
 }
 
 #item13 {
-    grid-row: span 6;
+    grid-column: span 4;
+    grid-row: span 3;
 }
 
 #item16,
 #item17 {
-    grid-row: span 4;
+    grid-row: span 2;
 }
 
-#item18,
-#item20 {
+#item18{
     grid-row: span 3;
 }
 
-#item5,
-#item6,
-#item7,
-#item8,
-#item9,
+
 #item10,
-#item11,
-#item12,
-#item14,
-#item15,
-#item21 {
+#item12 {
     grid-row: span 2;
 }
 
