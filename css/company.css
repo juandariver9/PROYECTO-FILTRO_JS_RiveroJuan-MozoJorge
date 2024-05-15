@@ -26,7 +26,6 @@ body {
     height: 100vh;
     width: 100vw;
     padding: 0px;
-    gap: 1px;
 }
 
 #infoEtapa1{
@@ -34,7 +33,6 @@ body {
 }
 
 .item {
-    background-color: gray ;
     display: flex;
 }
 
@@ -245,6 +243,7 @@ p {
 .descriptionContainer {
     display: flex;
     margin-top: 3vw;
+    margin-left: 10%;
     font-size: 1vw;
 }
 
@@ -252,4 +251,27 @@ div#item14 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+div#item4, div#item2{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+img#spaceX {
+  position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 38%;
+    width: 40vw;
+}
+
+div#item11 {
+  margin-top: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
