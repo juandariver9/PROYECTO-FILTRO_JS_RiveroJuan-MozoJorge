@@ -32,13 +32,6 @@ function displayInfoCompany(company) {
 
     let infoCompany = document.getElementById("infoCompany");
     infoCompany.innerHTML = `
-    <p><b>Enlaces:</b></p>
-    <ul>
-        <li><a href="${company.links.website}" target="_blank">Sitio web</a></li>
-        <li><a href="${company.links.flickr}" target="_blank">Galería de Flickr</a></li>
-        <li><a href="${company.links.twitter}" target="_blank">Twitter de SpaceX</a></li>
-        <li><a href="${company.links.elon_twitter}" target="_blank">Twitter de Elon Musk</a></li>
-    </ul>
     <p><b>Fundador: </b>${company.founder}</p>
     <p><b>Año de fundación: </b>${company.founded}</p>
     <p><b>Número de empleados: </b>${company.employees}</p>
