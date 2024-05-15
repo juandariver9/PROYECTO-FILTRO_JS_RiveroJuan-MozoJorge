@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="fetchRockets(1)">
 
 
     <div class="gridContainer">
@@ -20,15 +20,14 @@
             <div id="infoEtapa1" class="conteiner">
 
             </div>
-            <div id="infoEtapa2" class="conteiner">
-
-            </div>
         </div>
         <div class="item" id="item3">
 
         </div>
         <div class="item" id="item4">
-
+            <div id="containerInfoExtra" class="containerInfoExtra">
+                
+            </div>
         </div>
         <div class="item" id="item5"></div>
         <div class="item" id="item6"></div>
@@ -36,10 +35,7 @@
         <div class="item" id="item8"></div>
         <div class="item" id="item9"></div>
         <div class="item" id="item10"></div>
-        <div class="item" id="item11"></div>
-        <div class="item" id="item12"></div>
-        <div class="item" id="item13">
-
+        <div class="item" id="item11">
             <div id="carrusel-container">
                 <div id="carrusel">
                     
@@ -47,8 +43,10 @@
                 <button id="prevBtn"><</button>
                 <button id="nextBtn">></button>
             </div>
+        </div>
+        <div class="item" id="item12"></div>
+        <div class="item" id="item13">
 
-            
         </div>
         <div class="item" id="item14"></div>
         <div class="item" id="item15"></div>
@@ -59,10 +57,15 @@
             <img id="abajo" src="./storage/img/abajo.png" alt="abajo">
         </div>
         <div class="item" id="item18">
-            <button class="btn" onclick="fetchRockets(0)">1</button>
-            <button class="btn" onclick="fetchRockets(1)">2</button>
-            <button class="btn" onclick="fetchRockets(2)">3</button>
-            <button class="btn" onclick="fetchRockets(3)">4</button>
+            <div class="main">
+                <div class="buttons">
+                    <button class="button" onclick="fetchRockets(0)">1</button>
+                    <button class="button" onclick="fetchRockets(1)">2</button>
+                    <button class="button" onclick="fetchRockets(2)">3</button>
+                    <button class="button" onclick="fetchRockets(3)">4</button>
+                </div>
+              </div>
+              
         </div>
 
 
@@ -71,9 +74,9 @@
 
     </div>
     <div id=gridContainers>
-        <button class="btn" onclick="showRockets()">Rockets</button>
-        <button class="btn" onclick="showCapsules()">Capsules</button>
-        <button class="btn" onclick="showHistory()">History</button>
+        <button class="button" onclick="showRockets()">Rockets</button>
+        <button class="button" onclick="showCapsules()">Capsules</button>
+        <button class="button" onclick="showHistory()">History</button>
 
 
 
@@ -92,31 +95,31 @@
 
         <div id="capsules" class="conteinerCapsules">
 
-            <button class="btn" onclick="fetchCapsules(0)">s</button>
-            <button class="btn" onclick="fetchCapsules(1)">r</button>
-            <button class="btn" onclick="fetchCapsules(2)">y</button>
-            <button class="btn" onclick="fetchCapsules(3)">4</button>
-            <button class="btn" onclick="fetchCapsules(4)">5</button>
-            <button class="btn" onclick="fetchCapsules(5)">6</button>
-            <button class="btn" onclick="fetchCapsules(6)">7</button>
-            <button class="btn" onclick="fetchCapsules(7)">8</button>
-            <button class="btn" onclick="fetchCapsules(8)">9</button>
-            <button class="btn" onclick="fetchCapsules(9)">10</button>
-            <button class="btn" onclick="fetchCapsules(10)">11</button>
-            <button class="btn" onclick="fetchCapsules(11)">12</button>
-            <button class="btn" onclick="fetchCapsules(12)">13</button>
-            <button class="btn" onclick="fetchCapsules(13)">14</button>
-            <button class="btn" onclick="fetchCapsules(14)">15</button>
-            <button class="btn" onclick="fetchCapsules(15)">16</button>
-            <button class="btn" onclick="fetchCapsules(16)">17</button>
-            <button class="btn" onclick="fetchCapsules(17)">18</button>
-            <button class="btn" onclick="fetchCapsules(18)">19</button>
-            <button class="btn" onclick="fetchCapsules(19)">20</button>
-            <button class="btn" onclick="fetchCapsules(20)">21</button>
-            <button class="btn" onclick="fetchCapsules(21)">22</button>
-            <button class="btn" onclick="fetchCapsules(22)">23</button>
-            <button class="btn" onclick="fetchCapsules(23)">24</button>
-            <button class="btn" onclick="fetchCapsules(24)">25</button>
+            <button class="button" onclick="fetchCapsules(0)">s</button>
+            <button class="button" onclick="fetchCapsules(1)">r</button>
+            <button class="button" onclick="fetchCapsules(2)">y</button>
+            <button class="button" onclick="fetchCapsules(3)">4</button>
+            <button class="button" onclick="fetchCapsules(4)">5</button>
+            <button class="button" onclick="fetchCapsules(5)">6</button>
+            <button class="button" onclick="fetchCapsules(6)">7</button>
+            <button class="button" onclick="fetchCapsules(7)">8</button>
+            <button class="button" onclick="fetchCapsules(8)">9</button>
+            <button class="button" onclick="fetchCapsules(9)">10</button>
+            <button class="button" onclick="fetchCapsules(10)">11</button>
+            <button class="button" onclick="fetchCapsules(11)">12</button>
+            <button class="button" onclick="fetchCapsules(12)">13</button>
+            <button class="button" onclick="fetchCapsules(13)">14</button>
+            <button class="button" onclick="fetchCapsules(14)">15</button>
+            <button class="button" onclick="fetchCapsules(15)">16</button>
+            <button class="button" onclick="fetchCapsules(16)">17</button>
+            <button class="button" onclick="fetchCapsules(17)">18</button>
+            <button class="button" onclick="fetchCapsules(18)">19</button>
+            <button class="button" onclick="fetchCapsules(19)">20</button>
+            <button class="button" onclick="fetchCapsules(20)">21</button>
+            <button class="button" onclick="fetchCapsules(21)">22</button>
+            <button class="button" onclick="fetchCapsules(22)">23</button>
+            <button class="button" onclick="fetchCapsules(23)">24</button>
+            <button class="button" onclick="fetchCapsules(24)">25</button>
 
 
 
@@ -127,21 +130,21 @@
 
 
         <div id="history" class="conteinerHistory">
-            <button class="btn" onclick="fetchHistory(0)">1</button>
-            <button class="btn" onclick="fetchHistory(1)">2</button>
-            <button class="btn" onclick="fetchHistory(2)">3</button>
-            <button class="btn" onclick="fetchHistory(3)">4</button>
-            <button class="btn" onclick="fetchHistory(4)">5</button>
-            <button class="btn" onclick="fetchHistory(5)">6</button>
-            <button class="btn" onclick="fetchHistory(6)">7</button>
-            <button class="btn" onclick="fetchHistory(7)">8</button>
-            <button class="btn" onclick="fetchHistory(8)">9</button>
-            <button class="btn" onclick="fetchHistory(9)">10</button>
-            <button class="btn" onclick="fetchHistory(10)">11</button>
-            <button class="btn" onclick="fetchHistory(11)">12</button>
-            <button class="btn" onclick="fetchHistory(12)">13</button>
-            <button class="btn" onclick="fetchHistory(13)">14</button>
-            <button class="btn" onclick="fetchHistory(14)">15</button>
+            <button class="button" onclick="fetchHistory(0)">1</button>
+            <button class="button" onclick="fetchHistory(1)">2</button>
+            <button class="button" onclick="fetchHistory(2)">3</button>
+            <button class="button" onclick="fetchHistory(3)">4</button>
+            <button class="button" onclick="fetchHistory(4)">5</button>
+            <button class="button" onclick="fetchHistory(5)">6</button>
+            <button class="button" onclick="fetchHistory(6)">7</button>
+            <button class="button" onclick="fetchHistory(7)">8</button>
+            <button class="button" onclick="fetchHistory(8)">9</button>
+            <button class="button" onclick="fetchHistory(9)">10</button>
+            <button class="button" onclick="fetchHistory(10)">11</button>
+            <button class="button" onclick="fetchHistory(11)">12</button>
+            <button class="button" onclick="fetchHistory(12)">13</button>
+            <button class="button" onclick="fetchHistory(13)">14</button>
+            <button class="button" onclick="fetchHistory(14)">15</button>
 
             <div id="infoHistory">
 
