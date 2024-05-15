@@ -95,7 +95,12 @@ function displayInfoCompany(company) {
 
     let description = document.getElementById('item3')
 
-    description.innerHTML = `<p>${company.summary}</p>`;
+    description.innerHTML = `
+    <center>
+    <p>${company.summary}</p>
+    <center>
+
+    `;
 
 
     let creators = document.getElementById('item4')
