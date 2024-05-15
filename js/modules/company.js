@@ -16,9 +16,22 @@ function fetchCompany() {
 }
 
 function displayInfoCompany(company) {
+
+    let address = document.getElementById('item3')
+
+    address.innerHTML = `<p style="font-size:3vw;">${company.headquarters.state} ${company.headquarters.city} ${company.headquarters.address}  </p>`;
+
+    let redes = document.getElementById('item15');
+
+    redes.innerHTML = `
+    <div id="containerLinks">
+        <a href="${company.links.flickr}"><img id="icon" src="./storage/img/flickrIcon.svg" alt="xd"></a>
+        <a href="${company.links.twitter}"><img id="icon" src="./storage/img/twitterIcon.svg" alt="xd"></a>
+        <a href="${company.links.website}"><img id="icon" src="./storage/img/spaceXIcon.svg" alt="xd"></a>
+    </div>`
+
     let infoCompany = document.getElementById("infoCompany");
     infoCompany.innerHTML = `
-    <p><b>Dirección de la sede: </b>${company.headquarters.address}, ${company.headquarters.city}, ${company.headquarters.state}</p>
     <p><b>Enlaces:</b></p>
     <ul>
         <li><a href="${company.links.website}" target="_blank">Sitio web</a></li>
@@ -39,6 +52,24 @@ function displayInfoCompany(company) {
     <p><b>Valoración: </b>${company.valuation}</p>
     <p><b>Resumen: </b>${company.summary}</p>
     `;
+
+    let info = document.getElementById("infoCompany");
+    info.innerHTML = `
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>${rocket.country}</b> </p> 
+            ${rocket.description}
+        </div>
+
+    </div>`
+
+
+
 }
 
 fetchCompany();
