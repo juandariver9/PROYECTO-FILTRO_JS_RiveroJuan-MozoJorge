@@ -247,3 +247,9 @@ p {
     margin-top: 3vw;
     font-size: 1vw;
 }
+
+div#item14 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
