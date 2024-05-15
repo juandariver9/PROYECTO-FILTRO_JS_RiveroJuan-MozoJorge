@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/capsules.css">
+    <title>Document</title>
+</head>
+<body onload="fetchCapsules(0)">
+    
+    <div class="gridContainer">
+
+        <div class="item" id="item1">
+            <div id="name">
+
+            </div>
+            
+        </div>
+        <div class="item" id="item2">
+
+        </div>
+        <div class="item" id="item3">
+
+        </div>
+        <div class="item" id="item4">
+        </div>
+        <div class="item" id="item5"></div>
+        <div class="item" id="item6"></div>
+        <div class="item" id="item7"></div>
+        <div class="item" id="item8">       
+
+        </div>
+        <div class="item" id="item9"></div>
+        <div class="item" id="item10"></div>
+        <div class="item" id="item11">
+
+            <div id="infoCapsules">
+
+            </div>
+
+        </div>
+        <div class="item" id="item12"></div>
+        <div class="item" id="item13">
+
+        </div>
+        <div class="item" id="item14"></div>
+        <div class="item" id="item15"></div>
+        <div class="item" id="item16">
+
+        </div>
+        <div class="item" id="item17">
+            <a href="/index.html"><img id="rocketIcon" src="/storage/img/rocketIcon.svg" alt="Rocket"></a>
+            <a href="/capsules.html"><img id="capsuleIcon" src="/storage/img/capsuleIcon.svg" alt="Capsule"></a>
+            <a href="/history.html"><img id="historyIcon" src="/storage/img/historyIcon.svg" alt="History"></a>
+            <a href="/url-company"><img id="companyIcon" src="/storage/img/companyIcon.svg" alt="Company"></a>            
+            <img id="abajo" src="./storage/img/abajo.png" alt="abajo">
+        </div>
+        <div class="item" id="item18">
+            <div class="main">
+                <div class="buttons">
+                    <div class="group" id="group1">
+                        <!-- Primer grupo de botones -->
+                        <button class="button" onclick="fetchCapsules(0)">1</button>
+                        <button class="button" onclick="fetchCapsules(1)">2</button>
+                        <button class="button" onclick="fetchCapsules(2)">3</button>
+                        <button class="button" onclick="fetchCapsules(3)">4</button>
+                        <button class="button" onclick="fetchCapsules(4)">5</button>
+                    </div>
+                    <div class="group" id="group2" style="display: none;">
+                        <!-- Segundo grupo de botones -->
+                        <button class="button" onclick="fetchCapsules(5)">6</button>
+                        <button class="button" onclick="fetchCapsules(6)">7</button>
+                        <button class="button" onclick="fetchCapsules(7)">8</button>
+                        <button class="button" onclick="fetchCapsules(8)">9</button>
+                        <button class="button" onclick="fetchCapsules(9)">10</button>
+                    </div>
+                    <div class="group" id="group3" style="display: none;">
+                        <!-- Tercer grupo de botones -->
+                        <button class="button" onclick="fetchCapsules(10)">11</button>
+                        <button class="button" onclick="fetchCapsules(11)">12</button>
+                        <button class="button" onclick="fetchCapsules(12)">13</button>
+                        <button class="button" onclick="fetchCapsules(13)">14</button>
+                        <button class="button" onclick="fetchCapsules(14)">15</button>
+                    </div>
+                    <div class="group" id="group4" style="display: none;">
+                        <!-- Cuarto grupo de botones -->
+                        <button class="button" onclick="fetchCapsules(15)">16</button>
+                        <button class="button" onclick="fetchCapsules(16)">17</button>
+                        <button class="button" onclick="fetchCapsules(17)">18</button>
+                        <button class="button" onclick="fetchCapsules(18)">19</button>
+                        <button class="button" onclick="fetchCapsules(19)">20</button>
+                    </div>
+                    <div class="group" id="group5" style="display: none;">
+                        <!-- Quinto grupo de botones -->
+                        <button class="button" onclick="fetchCapsules(20)">21</button>
+                        <button class="button" onclick="fetchCapsules(21)">22</button>
+                        <button class="button" onclick="fetchCapsules(22)">23</button>
+                        <button class="button" onclick="fetchCapsules(23)">24</button>
+                        <button class="button" onclick="fetchCapsules(24)">25</button>
+                    </div>
+                    <br>
+                    <center>
+                        <button class="prev-next" onclick="prevGroup()"><</button>
+                        <button class="prev-next" onclick="nextGroup()">></button>
+                    </center>
+
+                </div>
+            </div>
+            
+            
+              
+        </div>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+    <script src="./js/modules/capsules.js"></script>
+
+</html>
