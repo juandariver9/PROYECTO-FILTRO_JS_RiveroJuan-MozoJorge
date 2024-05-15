@@ -48,13 +48,16 @@ function displayInfoCapsules(capsule) {
 
     infoCapsule.innerHTML = `
 
-    <p><b>Reutilización: </b>${capsule.reuse_count}</p>
-    <p><b>Aterrizajes en agua: </b>${capsule.water_landings}</p>
-    <p><b>Aterrizajes en tierra: </b>${capsule.land_landings}</p>
-    <p><b>Última actualización: </b>${capsule.last_update}</p>
-    <p><b>Número de serie: </b>${capsule.serial}</p>
-    <p><b>Estado: </b>${capsule.status}</p>
-    <p><b>Tipo: </b>${capsule.type}</p>
+    <ul style="margin-left:30px;">
+        <li><b>Reutilización: </b>${capsule.reuse_count}</li>
+        <li><b>Aterrizajes en agua: </b>${capsule.water_landings}</li>
+        <li><b>Aterrizajes en tierra: </b>${capsule.land_landings}</li>
+        <li><b>Última actualización: </b>${capsule.last_update}</li>
+        <li><b>Número de serie: </b>${capsule.serial}</li>
+        <li><b>Estado: </b>${capsule.status}</li>
+        <li><b>Tipo: </b>${capsule.type}</li>
+    </ul>
+
     
     `
 
