@@ -156,7 +156,7 @@ function fillProgressBar(barId, percentage) {
     let imagenes = document.getElementById("carrusel");
 
     imagenes.innerHTML = `
-        ${rocket.flickr_images.map(image => `<img src="${image}" alt="Rocket Image" style="max-width: 17vw; max-height: 20vw;">`).join('')}
+        ${rocket.flickr_images.map(image => `<img src="${image}" alt="Rocket Image" referrerpolicy= "no-referrer" style="max-width: 17vw; max-height: 20vw;">`).join('')}
     `;
     let etapa1 = document.getElementById("infoEtapa1");
     etapa1.innerHTML = `
