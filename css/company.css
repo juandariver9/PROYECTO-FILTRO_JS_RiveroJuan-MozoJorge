@@ -235,3 +235,15 @@ p {
     width: 5vw;
   }
 
+  #check {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.descriptionContainer {
+    display: flex;
+    margin-top: 3vw;
+    font-size: 1vw;
+}
