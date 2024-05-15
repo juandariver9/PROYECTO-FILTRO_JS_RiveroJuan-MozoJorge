@@ -17,7 +17,7 @@ function fetchCompany() {
 
 function displayInfoCompany(company) {
 
-    let address = document.getElementById('item3')
+    let address = document.getElementById('item15')
 
     address.innerHTML = `<p style="font-size:3vw;">${company.headquarters.state} ${company.headquarters.city} ${company.headquarters.address}  </p>`;
 
