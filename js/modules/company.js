@@ -21,14 +21,14 @@ function displayInfoCompany(company) {
 
     address.innerHTML = `<p style="font-size:3vw;">${company.headquarters.state} ${company.headquarters.city} ${company.headquarters.address}  </p>`;
 
-    let redes = document.getElementById('item15');
+    let redes = document.getElementById('item16');
 
     redes.innerHTML = `
-    <div id="containerLinks">
-        <a href="${company.links.flickr}"><img id="icon" src="./storage/img/flickrIcon.svg" alt="xd"></a>
-        <a href="${company.links.twitter}"><img id="icon" src="./storage/img/twitterIcon.svg" alt="xd"></a>
-        <a href="${company.links.website}"><img id="icon" src="./storage/img/spaceXIcon.svg" alt="xd"></a>
-    </div>`
+        <a href="${company.links.flickr}"><img id="iconf" class="icon" src="./storage/img/flickrIcon.svg" alt="xd"></a>
+        <a href="${company.links.twitter}"><img id="icont" class="icon" src="./storage/img/twitterIcon.svg" alt="xd"></a>
+        <a href="${company.links.website}"><img id="icons" class="icon" src="./storage/img/spaceXIcon.svg" alt="xd"></a>
+        
+    `
 
     let infoCompany = document.getElementById("infoCompany");
     infoCompany.innerHTML = `
