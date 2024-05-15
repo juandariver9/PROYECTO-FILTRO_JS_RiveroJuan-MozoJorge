@@ -128,7 +128,7 @@ function displayInfoCompany(company) {
 
     let infoCompany = document.getElementById("item14");
     infoCompany.innerHTML = `
-    <p><b>Valoración: </b>${company.valuation}</p>
+    <p><b>Valoración: </b><br>$ ${company.valuation}</p>
     `;
 
     let info = document.getElementById("infoCompany");
