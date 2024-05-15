@@ -17,6 +17,97 @@ function fetchCompany() {
 
 function displayInfoCompany(company) {
 
+    let infos = document.getElementById('Company')
+
+    infos.innerHTML = `
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Founded</b> </p> 
+            ${company.founded}
+        </div>
+
+    </div>
+    
+        <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Number of Employees</b> </p> 
+            ${company.employees}
+        </div>
+
+    </div>
+
+    </div>
+    
+        <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Vehicles</b> </p> 
+            ${company.vehicles}
+        </div>
+
+    </div>
+
+    </div>
+    
+        <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Launch Sites</b> </p> 
+            ${company.launch_sites}
+        </div>
+
+    </div>
+
+    </div>
+    
+        <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Test Sites</b> </p> 
+            ${company.test_sites}
+        </div>
+
+    </div>
+    `;
+
+    let description = document.getElementById('item3')
+
+    description.innerHTML = `<p>${company.summary}</p>`;
+
+
+    let creators = document.getElementById('item4')
+
+    creators.innerHTML = `
+    <p><b>Fundador: </b>${company.founder}</p>
+    <p><b>CEO: </b>${company.ceo}</p>
+    <p><b>CTO: </b>${company.cto}</p>
+    <p><b>COO: </b>${company.coo}</p>
+    <p><b>CTO de Propulsión: </b>${company.cto_propulsion}</p>
+    `
+
     let address = document.getElementById('item15')
 
     address.innerHTML = `<p style="font-size:3vw;">${company.headquarters.state} ${company.headquarters.city} ${company.headquarters.address}  </p>`;
@@ -30,20 +121,9 @@ function displayInfoCompany(company) {
         
     `
 
-    let infoCompany = document.getElementById("infoCompany");
+    let infoCompany = document.getElementById("item14");
     infoCompany.innerHTML = `
-    <p><b>Fundador: </b>${company.founder}</p>
-    <p><b>Año de fundación: </b>${company.founded}</p>
-    <p><b>Número de empleados: </b>${company.employees}</p>
-    <p><b>Vehículos: </b>${company.vehicles}</p>
-    <p><b>Sitios de lanzamiento: </b>${company.launch_sites}</p>
-    <p><b>Sitios de prueba: </b>${company.test_sites}</p>
-    <p><b>CEO: </b>${company.ceo}</p>
-    <p><b>CTO: </b>${company.cto}</p>
-    <p><b>COO: </b>${company.coo}</p>
-    <p><b>CTO de Propulsión: </b>${company.cto_propulsion}</p>
     <p><b>Valoración: </b>${company.valuation}</p>
-    <p><b>Resumen: </b>${company.summary}</p>
     `;
 
     let info = document.getElementById("infoCompany");
