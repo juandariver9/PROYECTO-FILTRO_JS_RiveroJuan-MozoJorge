@@ -106,11 +106,72 @@ function displayInfoCompany(company) {
     let creators = document.getElementById('item4')
 
     creators.innerHTML = `
-    <p><b>Fundador: </b>${company.founder}</p>
-    <p><b>CEO: </b>${company.ceo}</p>
-    <p><b>CTO: </b>${company.cto}</p>
-    <p><b>COO: </b>${company.coo}</p>
-    <p><b>CTO de Propulsión: </b>${company.cto_propulsion}</p>
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Fundador</b> </p> 
+            ${company.founder}
+        </div>
+
+    </div>
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>CEO</b> </p> 
+            ${company.ceo}
+        </div>
+
+    </div>
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>CTO</b> </p> 
+            ${company.cto}
+        </div>
+
+    </div>
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>COO</b> </p> 
+            ${company.coo}
+        </div>
+
+    </div>
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Propulsion CTO</b> </p> 
+            ${company.cto_propulsion}
+        </div>
+
+    </div>
+
     `
 
     let address = document.getElementById('item15')
@@ -126,9 +187,10 @@ function displayInfoCompany(company) {
         
     `
 
-    let infoCompany = document.getElementById("item14");
+    let infoCompany = document.getElementById("item11");
     infoCompany.innerHTML = `
-    <p><b>Valoración: </b><br>$ ${company.valuation}</p>
+
+    <p style="font-size: 2vw;"><b>Valoración: </b><br>$ ${company.valuation}</p>
     `;
 
     let info = document.getElementById("infoCompany");
