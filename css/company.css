@@ -209,3 +209,23 @@ button {
 p {
     font-size: 20px;
 }
+
+
+#item16 {
+    display: flex;
+    justify-content: space-around  ;
+}
+  
+.icon {
+    margin-bottom:1%;
+}
+  #iconf {
+    width: 3vw;
+  }
+  #icont{
+    width: 5vw;
+  }
+  #icons{
+    width: 5vw;
+  }
+
