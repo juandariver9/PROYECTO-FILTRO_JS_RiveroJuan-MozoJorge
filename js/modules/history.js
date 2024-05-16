@@ -54,7 +54,7 @@ function displayInfoHistory(history) {
         <div style="margin-left:15px;">
             <p><b>Links</b> </p> 
             <ul>
-                <li><a href="${history.links.article}" target="_blank">Artículo</a></li>
+                <li><a style="color:#298bfe;" href="${history.links.article}" target="_blank">Artículo</a></li>
             </ul>
         </div>
 

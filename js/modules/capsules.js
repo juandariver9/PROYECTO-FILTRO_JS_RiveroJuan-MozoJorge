@@ -49,13 +49,13 @@ function displayInfoCapsules(capsule) {
     infoCapsule.innerHTML = `
 
     <ul style="margin-left:30px;">
-        <li><b>Reuse: </b>${capsule.reuse_count}</li>
-        <li><b>Landings in water: </b>${capsule.water_landings}</li>
-        <li><b>Ground landings: </b>${capsule.land_landings}</li>
-        <li><b>Last update: </b>${capsule.last_update}</li>
-        <li><b>Serial Number: </b>${capsule.serial}</li>
-        <li><b>Status: </b>${capsule.status}</li>
-        <li><b>Type: </b>${capsule.type}</li>
+        <li><b>Reuse: </b><span style="color: #c6c6c6;">${capsule.reuse_count}</li>
+        <li><b>Landings in water: </b><span style="color: #c6c6c6;">${capsule.water_landings}</li>
+        <li><b>Ground landings: </b><span style="color: #c6c6c6;">${capsule.land_landings}</li>
+        <li><b>Last update: </b><span style="color: #c6c6c6;">${capsule.last_update}</li>
+        <li><b>Serial Number: </b><span style="color: #c6c6c6;">${capsule.serial}</li>
+        <li><b>Status: </b><span style="color: #c6c6c6;">${capsule.status}</li>
+        <li><b>Type: </b><span style="color: #c6c6c6;">${capsule.type}</li>
     </ul>
 
     
@@ -68,11 +68,11 @@ function displayInfoCapsules(capsule) {
     <p><b>Release Information:</b></p>
     <br>
     <ul>
-        <li><b>Date UTC:</b> ${capsule.launchInfo.date_utc}</li>
-        <li><b>Success:</b> ${capsule.launchInfo.success ? 'Sí' : 'No'}</li>
-        <li><b>Details:</b> ${capsule.launchInfo.details}</li>
-        <li><b>Article:</b> <a href="${capsule.launchInfo.links.article}">Enlace</a></li>
-        <li><b>Webcast:</b> <a href="${capsule.launchInfo.links.webcast}">Ver aquí</a></li>
+        <li><b>Date UTC:</b> <span style="color: #c6c6c6;">${capsule.launchInfo.date_utc}</li>
+        <li><b>Success:</b> <span style="color: #c6c6c6;">${capsule.launchInfo.success ? 'Sí' : 'No'}</li>
+        <li><b>Details:</b> <span style="color: #c6c6c6;">${capsule.launchInfo.details}</li>
+        <li><b>Article:</b> <a style="color:#298bfe;" href="${capsule.launchInfo.links.article}">Enlace</a></li>
+        <li><b>Webcast:</b> <a style="color:#298bfe;" href="${capsule.launchInfo.links.webcast}">Ver aquí</a></li>
         
     </ul>
     

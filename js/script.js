@@ -168,7 +168,7 @@ function fillProgressBar(barId, percentage) {
 
         <div style="margin-left:15px;">
             <p><b>${rocket.country}</b> </p> 
-            ${rocket.description}
+            <p style="color: #c6c6c6;">${rocket.description}
         </div>
 
     </div>
@@ -181,7 +181,7 @@ function fillProgressBar(barId, percentage) {
 
         <div style="margin-left:15px;">
             <p><b>The estimated cost per rocket launch</b> </p> 
-            $${rocket.cost_per_launch}
+            <p style="color: #c6c6c6;">$${rocket.cost_per_launch}
         </div>
 
     </div>
@@ -194,7 +194,7 @@ function fillProgressBar(barId, percentage) {
 
         <div style="margin-left:15px;">
             <p><b>The date of the first flight of the rocket</b> </p> 
-            $${rocket.first_flight}
+            <p style="color: #c6c6c6;">${rocket.first_flight}
         </div>
         
     </div>
@@ -207,7 +207,7 @@ function fillProgressBar(barId, percentage) {
 
         <div style="margin-left:15px;">
             <p><b>Read more about the coete</b> </p> 
-            <a href="${rocket.wikipedia}" target="_blank">Here</a>
+            <a style="color:#298bfe;" href="${rocket.wikipedia}" target="_blank">Here</a>
         </div>
         
     </div>
@@ -234,12 +234,12 @@ function fillProgressBar(barId, percentage) {
                 <p><span>Leg material</span></p>
             </div>
             <div class="right">
-                <p>${rocket.type}</p>
-                <p>${rocket.active ? 'Active' : 'Disable'}</p>
-                <p>${rocket.stages}</p>
-                <p>${rocket.boosters}</p>
-                <p>${rocket.landing_legs.number}</p>
-                <p>${rocket.landing_legs.material}</p>
+                <p style="color: #c6c6c6;">${rocket.type}</p>
+                <p style="color: #c6c6c6;">${rocket.active ? 'Active' : 'Disable'}</p>
+                <p style="color: #c6c6c6;">${rocket.stages}</p>
+                <p style="color: #c6c6c6;">${rocket.boosters}</p>
+                <p style="color: #c6c6c6;">${rocket.landing_legs.number}</p>
+                <p style="color: #c6c6c6;">${rocket.landing_legs.material}</p>
             </div>
         </div>
 
@@ -266,12 +266,12 @@ function fillProgressBar(barId, percentage) {
                 <p><span>Stage 2 fuel</span></p>
             </div>
             <div class="right">
-                <p>${rocket.engines.type}</p>
-                <p>${rocket.engines.engine_loss_max}</p>
-                <p>${rocket.engines.layout}</p>
-                <p>${rocket.first_stage.engines}</p>
-                <p>${rocket.engines.propellant_1}</p>
-                <p>${rocket.engines.propellant_2}</p>
+                <p style="color: #c6c6c6;">${rocket.engines.type}</p>
+                <p style="color: #c6c6c6;">${rocket.engines.engine_loss_max}</p>
+                <p style="color: #c6c6c6;">${rocket.engines.layout}</p>
+                <p style="color: #c6c6c6;">${rocket.first_stage.engines}</p>
+                <p style="color: #c6c6c6;">${rocket.engines.propellant_1}</p>
+                <p style="color: #c6c6c6;">${rocket.engines.propellant_2}</p>
             </div>
         </div>
 
