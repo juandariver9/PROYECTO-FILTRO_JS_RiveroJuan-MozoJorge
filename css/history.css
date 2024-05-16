@@ -26,7 +26,6 @@ body {
     height: 100vh;
     width: 100vw;
     padding: 0px;
-    gap: 1px;
 }
 
 #infoEtapa1{
@@ -34,7 +33,6 @@ body {
 }
 
 .item {
-    background-color: gray ;
     display: flex;
 }
 
@@ -205,3 +203,46 @@ button {
     align-self: end;
     z-index: 1;
   }
+
+div#item1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#check {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.descriptionContainer {
+    display: flex;
+    margin-top: 3vw;
+    margin-left: 10%;
+    font-size: 1vw;
+}
+div#item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div#item1 {
+    font-size: 4vw;
+}
+
+
+img#rocket {
+    position: absolute;
+    top: -20%;
+    transform: rotate(65deg);
+}
+
+.bottom-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10vw;
+}

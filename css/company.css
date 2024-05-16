@@ -275,3 +275,10 @@ div#item11 {
   justify-content: center;
   
 }
+
+.bottom-left {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 10vw;
+}

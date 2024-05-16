@@ -219,3 +219,10 @@ button {
     color: white;
     text-align: center;
 }
+
+.bottom-left {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10vw;
+}

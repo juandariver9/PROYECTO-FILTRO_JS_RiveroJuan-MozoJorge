@@ -385,3 +385,10 @@ div#item14, div#item13{
     align-self: end;
     z-index: 1;
   }
+
+  .bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 10vw;
+}
