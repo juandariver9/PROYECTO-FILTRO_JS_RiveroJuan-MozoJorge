@@ -24,17 +24,78 @@ function displayInfoHistory(history) {
 
     let name = document.getElementById('item1');
 
-    name.innerHTML = `<p>${history.title}</p>`;
+    name.innerHTML = `
+    <p id="title">${history.title.toUpperCase()}</p>
+    `;
+
+    let details = document.getElementById('item2')
+
+    details.innerHTML = `
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Detalles</b> </p> 
+            ${history.details}
+        </div>
+
+    </div>
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Enlaces</b> </p> 
+            <ul>
+                <li><a href="${history.links.article}" target="_blank">Artículo</a></li>
+            </ul>
+        </div>
+
+    </div>
+    `
+
+    let date = document.getElementById('item4')
+
+    date.innerHTML = `
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Fecha del evento (UTC)</b> </p> 
+            ${history.event_date_utc}
+        </div>
+
+    </div>
+
+    <div class="descriptionContainer">
+
+        <div>
+            <img id="check" src="./storage/img/check.svg" alt="check">
+        </div>
+
+        <div style="margin-left:15px;">
+            <p><b>Fecha del evento (Unix)</b> </p> 
+            ${history.event_date_unix}
+        </div>
+
+    </div>
+
+    `
 
     let infoHistory = document.getElementById("infoHistory");
     infoHistory.innerHTML = `
-    <p><b>Fecha del evento (UTC): </b>${history.event_date_utc}</p>
-    <p><b>Fecha del evento (Unix): </b>${history.event_date_unix}</p>
-    <p><b>Detalles: </b>${history.details}</p>
-    <p><b>Enlaces:</b></p>
-    <ul>
-        <li><a href="${history.links.article}" target="_blank">Artículo</a></li>
-    </ul>
+
 `;
 }
 
