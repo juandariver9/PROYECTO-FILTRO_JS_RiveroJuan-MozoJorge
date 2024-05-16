@@ -49,13 +49,13 @@ function displayInfoCapsules(capsule) {
     infoCapsule.innerHTML = `
 
     <ul style="margin-left:30px;">
-        <li><b>Reutilización: </b>${capsule.reuse_count}</li>
-        <li><b>Aterrizajes en agua: </b>${capsule.water_landings}</li>
-        <li><b>Aterrizajes en tierra: </b>${capsule.land_landings}</li>
-        <li><b>Última actualización: </b>${capsule.last_update}</li>
-        <li><b>Número de serie: </b>${capsule.serial}</li>
-        <li><b>Estado: </b>${capsule.status}</li>
-        <li><b>Tipo: </b>${capsule.type}</li>
+        <li><b>Reuse: </b>${capsule.reuse_count}</li>
+        <li><b>Landings in water: </b>${capsule.water_landings}</li>
+        <li><b>Ground landings: </b>${capsule.land_landings}</li>
+        <li><b>Last update: </b>${capsule.last_update}</li>
+        <li><b>Serial Number: </b>${capsule.serial}</li>
+        <li><b>Status: </b>${capsule.status}</li>
+        <li><b>Type: </b>${capsule.type}</li>
     </ul>
 
     
@@ -65,13 +65,13 @@ function displayInfoCapsules(capsule) {
 
     infoLaunch.innerHTML = `
 
-    <p><b>Información de Lanzamiento:</b></p>
+    <p><b>Release Information:</b></p>
     <br>
     <ul>
-        <li><b>Fecha UTC:</b> ${capsule.launchInfo.date_utc}</li>
-        <li><b>Éxito:</b> ${capsule.launchInfo.success ? 'Sí' : 'No'}</li>
-        <li><b>Detalles:</b> ${capsule.launchInfo.details}</li>
-        <li><b>Artículo:</b> <a href="${capsule.launchInfo.links.article}">Enlace</a></li>
+        <li><b>Date UTC:</b> ${capsule.launchInfo.date_utc}</li>
+        <li><b>Success:</b> ${capsule.launchInfo.success ? 'Sí' : 'No'}</li>
+        <li><b>Details:</b> ${capsule.launchInfo.details}</li>
+        <li><b>Article:</b> <a href="${capsule.launchInfo.links.article}">Enlace</a></li>
         <li><b>Webcast:</b> <a href="${capsule.launchInfo.links.webcast}">Ver aquí</a></li>
         
     </ul>

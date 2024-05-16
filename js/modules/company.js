@@ -114,7 +114,7 @@ function displayInfoCompany(company) {
         </div>
 
         <div style="margin-left:15px;">
-            <p><b>Fundador</b> </p> 
+            <p><b>Founder</b> </p> 
             ${company.founder}
         </div>
 
@@ -190,7 +190,7 @@ function displayInfoCompany(company) {
     let infoCompany = document.getElementById("item11");
     infoCompany.innerHTML = `
 
-    <p style="font-size: 2vw;"><b>Valoración: </b><br>$ ${company.valuation}</p>
+    <p style="font-size: 2vw;"><b>Valuation: </b><br>$ ${company.valuation}</p>
     `;
 
     let info = document.getElementById("infoCompany");

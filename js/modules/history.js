@@ -39,7 +39,7 @@ function displayInfoHistory(history) {
         </div>
 
         <div style="margin-left:15px;">
-            <p><b>Detalles</b> </p> 
+            <p><b>Details</b> </p> 
             ${history.details}
         </div>
 
@@ -52,7 +52,7 @@ function displayInfoHistory(history) {
         </div>
 
         <div style="margin-left:15px;">
-            <p><b>Enlaces</b> </p> 
+            <p><b>Links</b> </p> 
             <ul>
                 <li><a href="${history.links.article}" target="_blank">Artículo</a></li>
             </ul>
@@ -72,7 +72,7 @@ function displayInfoHistory(history) {
         </div>
 
         <div style="margin-left:15px;">
-            <p><b>Fecha del evento (UTC)</b> </p> 
+            <p><b>Event date (UTC)</b> </p> 
             ${history.event_date_utc}
         </div>
 
@@ -85,7 +85,7 @@ function displayInfoHistory(history) {
         </div>
 
         <div style="margin-left:15px;">
-            <p><b>Fecha del evento (Unix)</b> </p> 
+            <p><b>Event date (Unix)</b> </p> 
             ${history.event_date_unix}
         </div>
 
