@@ -40,6 +40,6 @@ Para ejecutar la página web, simplemente abre el archivo `index.html` en tu nav
 Este proyecto fue creado por Juan David Rivero Romero y Jorge Mozo Mozo.
 
 ## Recursos adicionales
-
+- [Figma](https://www.figma.com/design/ylUcPnw66KscoZ9akTeLne/Untitled?node-id=0%3A1&t=rT8S655XF3k90zfs-1)
 - [Documentación de la API de SpaceX](https://github.com/r-spacex/SpaceX-API)
 - [Sitio web de SpaceX](https://www.spacex.com/)
